@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -57,9 +57,48 @@ namespace TravelTickets
             new Route("Москва", "Екатеринбург", "Самолёт", new List<string>()),
             new Route("Москва", "Сочи", "Самолёт", new List<string>()),
             new Route("Москва", "Владивосток", "Самолёт", new List<string> { "Новосибирск" }),
+
+            new Route("Санкт-Петербург", "Москва", "Поезд", new List<string>()),
             new Route("Санкт-Петербург", "Екатеринбург", "Самолёт", new List<string>()),
+            new Route("Санкт-Петербург", "Казань", "Самолёт", new List<string> { "Москва" }),
+            new Route("Санкт-Петербург", "Новосибирск", "Самолёт", new List<string> { "Москва" }),
+            new Route("Санкт-Петербург", "Владивосток", "Самолёт", new List<string> { "Новосибирск" }),
+            new Route("Санкт-Петербург", "Сочи", "Самолёт", new List<string> { "Москва" }),
+
+            new Route("Казань", "Москва", "Самолёт", new List<string>()),
+            new Route("Казань", "Санкт-Петербург", "Самолёт", new List<string> { "Москва" }),
+            new Route("Казань", "Екатеринбург", "Самолёт", new List<string>()),
             new Route("Казань", "Новосибирск", "Самолёт", new List<string>()),
+            new Route("Казань", "Владивосток", "Самолёт", new List<string> { "Новосибирск" }),
+            new Route("Казань", "Сочи", "Самолёт", new List<string> { "Москва" }),
+
+            new Route("Новосибирск", "Москва", "Самолёт", new List<string>()),
+            new Route("Новосибирск", "Санкт-Петербург", "Самолёт", new List<string> { "Москва" }),
+            new Route("Новосибирск", "Казань", "Самолёт", new List<string>()),
+            new Route("Новосибирск", "Екатеринбург", "Самолёт", new List<string>()),
             new Route("Новосибирск", "Владивосток", "Самолёт", new List<string>()),
+            new Route("Новосибирск", "Сочи", "Самолёт", new List<string> { "Москва" }),
+
+            new Route("Екатеринбург", "Москва", "Самолёт", new List<string>()),
+            new Route("Екатеринбург", "Санкт-Петербург", "Самолёт", new List<string>()),
+            new Route("Екатеринбург", "Казань", "Самолёт", new List<string>()),
+            new Route("Екатеринбург", "Новосибирск", "Самолёт", new List<string>()),
+            new Route("Екатеринбург", "Владивосток", "Самолёт", new List<string> { "Новосибирск" }),
+            new Route("Екатеринбург", "Сочи", "Самолёт", new List<string> { "Москва" }),
+
+            new Route("Владивосток", "Москва", "Самолёт", new List<string> { "Новосибирск" }),
+            new Route("Владивосток", "Санкт-Петербург", "Самолёт", new List<string> { "Новосибирск", "Москва" }),
+            new Route("Владивосток", "Казань", "Самолёт", new List<string> { "Новосибирск" }),
+            new Route("Владивосток", "Новосибирск", "Самолёт", new List<string>()),
+            new Route("Владивосток", "Екатеринбург", "Самолёт", new List<string> { "Новосибирск" }),
+            new Route("Владивосток", "Сочи", "Самолёт", new List<string> { "Новосибирск", "Москва" }),
+
+            new Route("Сочи", "Москва", "Самолёт", new List<string>()),
+            new Route("Сочи", "Санкт-Петербург", "Самолёт", new List<string> { "Москва" }),
+            new Route("Сочи", "Казань", "Самолёт", new List<string> { "Москва" }),
+            new Route("Сочи", "Новосибирск", "Самолёт", new List<string> { "Москва" }),
+            new Route("Сочи", "Екатеринбург", "Самолёт", new List<string> { "Москва" }),
+            new Route("Сочи", "Владивосток", "Самолёт", new List<string> { "Новосибирск", "Москва" }),
 
             // Беларусь: маршруты внутри страны
             new Route("Минск", "Брест", "Поезд", new List<string>()),
@@ -68,8 +107,48 @@ namespace TravelTickets
             new Route("Минск", "Гомель", "Поезд", new List<string>()),
             new Route("Минск", "Могилёв", "Поезд", new List<string>()),
             new Route("Минск", "Полоцк", "Поезд", new List<string> { "Витебск" }),
+
+            new Route("Брест", "Минск", "Поезд", new List<string>()),
+            new Route("Брест", "Гродно", "Поезд", new List<string>()),
+            new Route("Брест", "Витебск", "Поезд", new List<string> { "Минск" }),
+            new Route("Брест", "Гомель", "Поезд", new List<string> { "Минск" }),
+            new Route("Брест", "Могилёв", "Поезд", new List<string> { "Минск" }),
+            new Route("Брест", "Полоцк", "Поезд", new List<string> { "Минск", "Витебск" }),
+
+            new Route("Гродно", "Минск", "Поезд", new List<string>()),
             new Route("Гродно", "Брест", "Поезд", new List<string>()),
+            new Route("Гродно", "Витебск", "Поезд", new List<string> { "Минск" }),
+            new Route("Гродно", "Гомель", "Поезд", new List<string> { "Минск" }),
+            new Route("Гродно", "Могилёв", "Поезд", new List<string> { "Минск" }),
+            new Route("Гродно", "Полоцк", "Поезд", new List<string> { "Минск", "Витебск" }),
+
+            new Route("Витебск", "Минск", "Поезд", new List<string>()),
+            new Route("Витебск", "Брест", "Поезд", new List<string> { "Минск" }),
+            new Route("Витебск", "Гродно", "Поезд", new List<string> { "Минск" }),
+            new Route("Витебск", "Гомель", "Поезд", new List<string> { "Минск" }),
+            new Route("Витебск", "Могилёв", "Поезд", new List<string>()),
+            new Route("Витебск", "Полоцк", "Поезд", new List<string>()),
+
+            new Route("Гомель", "Минск", "Поезд", new List<string>()),
+            new Route("Гомель", "Брест", "Поезд", new List<string> { "Минск" }),
+            new Route("Гомель", "Гродно", "Поезд", new List<string> { "Минск" }),
+            new Route("Гомель", "Витебск", "Поезд", new List<string> { "Минск" }),
             new Route("Гомель", "Могилёв", "Поезд", new List<string>()),
+            new Route("Гомель", "Полоцк", "Поезд", new List<string> { "Минск", "Витебск" }),
+
+            new Route("Могилёв", "Минск", "Поезд", new List<string>()),
+            new Route("Могилёв", "Брест", "Поезд", new List<string> { "Минск" }),
+            new Route("Могилёв", "Гродно", "Поезд", new List<string> { "Минск" }),
+            new Route("Могилёв", "Витебск", "Поезд", new List<string>()),
+            new Route("Могилёв", "Гомель", "Поезд", new List<string>()),
+            new Route("Могилёв", "Полоцк", "Поезд", new List<string> { "Витебск" }),
+
+            new Route("Полоцк", "Минск", "Поезд", new List<string> { "Витебск" }),
+            new Route("Полоцк", "Брест", "Поезд", new List<string> { "Витебск", "Минск" }),
+            new Route("Полоцк", "Гродно", "Поезд", new List<string> { "Витебск", "Минск" }),
+            new Route("Полоцк", "Витебск", "Поезд", new List<string>()),
+            new Route("Полоцк", "Гомель", "Поезд", new List<string> { "Витебск", "Минск" }),
+            new Route("Полоцк", "Могилёв", "Поезд", new List<string> { "Витебск" }),
 
             // Канада: маршруты внутри страны
             new Route("Торонто", "Монреаль", "Самолёт", new List<string>()),
@@ -78,40 +157,189 @@ namespace TravelTickets
             new Route("Торонто", "Калгари", "Самолёт", new List<string>()),
             new Route("Торонто", "Оттава", "Самолёт", new List<string>()),
             new Route("Торонто", "Виннипег", "Самолёт", new List<string> { "Калгари" }),
+
+            new Route("Монреаль", "Торонто", "Самолёт", new List<string>()),
             new Route("Монреаль", "Квебек", "Самолёт", new List<string>()),
+            new Route("Монреаль", "Ванкувер", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Монреаль", "Калгари", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Монреаль", "Оттава", "Самолёт", new List<string>()),
+            new Route("Монреаль", "Виннипег", "Самолёт", new List<string> { "Калгари" }),
+
+            new Route("Ванкувер", "Торонто", "Самолёт", new List<string>()),
+            new Route("Ванкувер", "Монреаль", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Ванкувер", "Квебек", "Самолёт", new List<string> { "Торонто" }),
             new Route("Ванкувер", "Калгари", "Самолёт", new List<string>()),
+            new Route("Ванкувер", "Оттава", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Ванкувер", "Виннипег", "Самолёт", new List<string> { "Калгари" }),
+
+            new Route("Калгари", "Торонто", "Самолёт", new List<string>()),
+            new Route("Калгари", "Монреаль", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Калгари", "Ванкувер", "Самолёт", new List<string>()),
+            new Route("Калгари", "Квебек", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Калгари", "Оттава", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Калгари", "Виннипег", "Самолёт", new List<string>()),
+
+            new Route("Квебек", "Торонто", "Самолёт", new List<string>()),
+            new Route("Квебек", "Монреаль", "Самолёт", new List<string>()),
+            new Route("Квебек", "Ванкувер", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Квебек", "Калгари", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Квебек", "Оттава", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Квебек", "Виннипег", "Самолёт", new List<string> { "Калгари" }),
+
+            new Route("Оттава", "Торонто", "Самолёт", new List<string>()),
+            new Route("Оттава", "Монреаль", "Самолёт", new List<string>()),
+            new Route("Оттава", "Ванкувер", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Оттава", "Калгари", "Самолёт", new List<string> { "Торонто" }),
+            new Route("Оттава", "Квебек", "Самолёт", new List<string>()),
+            new Route("Оттава", "Виннипег", "Самолёт", new List<string> { "Калгари" }),
+
+            new Route("Виннипег", "Торонто", "Самолёт", new List<string> { "Калгари" }),
+            new Route("Виннипег", "Монреаль", "Самолёт", new List<string> { "Калгари" }),
+            new Route("Виннипег", "Ванкувер", "Самолёт", new List<string> { "Калгари" }),
+            new Route("Виннипег", "Калгари", "Самолёт", new List<string>()),
+            new Route("Виннипег", "Квебек", "Самолёт", new List<string> { "Калгари" }),
+            new Route("Виннипег", "Оттава", "Самолёт", new List<string> { "Калгари" }),
 
             // Китай: маршруты внутри страны
-            new Route("Пекин", "Шанхай", "Самолёт", new List<string>()),
+             new Route("Пекин", "Шанхай", "Самолёт", new List<string>()),
             new Route("Пекин", "Гуанчжоу", "Самолёт", new List<string>()),
             new Route("Пекин", "Чэнду", "Самолёт", new List<string>()),
             new Route("Пекин", "Сиань", "Самолёт", new List<string>()),
             new Route("Пекин", "Ханчжоу", "Самолёт", new List<string>()),
             new Route("Пекин", "Гонконг", "Самолёт", new List<string> { "Шанхай" }),
+
+            new Route("Шанхай", "Пекин", "Самолёт", new List<string>()),
             new Route("Шанхай", "Гуанчжоу", "Самолёт", new List<string>()),
+            new Route("Шанхай", "Чэнду", "Самолёт", new List<string>()),
+            new Route("Шанхай", "Сиань", "Самолёт", new List<string>()),
+            new Route("Шанхай", "Ханчжоу", "Самолёт", new List<string>()),
+            new Route("Шанхай", "Гонконг", "Самолёт", new List<string>()),
+
+            new Route("Гуанчжоу", "Пекин", "Самолёт", new List<string>()),
+            new Route("Гуанчжоу", "Шанхай", "Самолёт", new List<string>()),
             new Route("Гуанчжоу", "Чэнду", "Самолёт", new List<string>()),
+            new Route("Гуанчжоу", "Сиань", "Самолёт", new List<string>()),
+            new Route("Гуанчжоу", "Ханчжоу", "Самолёт", new List<string>()),
+            new Route("Гуанчжоу", "Гонконг", "Самолёт", new List<string>()),
+
+            new Route("Чэнду", "Пекин", "Самолёт", new List<string>()),
+            new Route("Чэнду", "Шанхай", "Самолёт", new List<string>()),
+            new Route("Чэнду", "Гуанчжоу", "Самолёт", new List<string>()),
+            new Route("Чэнду", "Сиань", "Самолёт", new List<string>()),
+            new Route("Чэнду", "Ханчжоу", "Самолёт", new List<string>()),
+            new Route("Чэнду", "Гонконг", "Самолёт", new List<string> { "Шанхай" }),
+
+            new Route("Сиань", "Пекин", "Самолёт", new List<string>()),
+            new Route("Сиань", "Шанхай", "Самолёт", new List<string>()),
+            new Route("Сиань", "Гуанчжоу", "Самолёт", new List<string>()),
+            new Route("Сиань", "Чэнду", "Самолёт", new List<string>()),
+            new Route("Сиань", "Ханчжоу", "Самолёт", new List<string>()),
+            new Route("Сиань", "Гонконг", "Самолёт", new List<string> { "Шанхай" }),
+
+            new Route("Ханчжоу", "Пекин", "Самолёт", new List<string>()),
+            new Route("Ханчжоу", "Шанхай", "Самолёт", new List<string>()),
+            new Route("Ханчжоу", "Гуанчжоу", "Самолёт", new List<string>()),
+            new Route("Ханчжоу", "Чэнду", "Самолёт", new List<string>()),
+            new Route("Ханчжоу", "Сиань", "Самолёт", new List<string>()),
+            new Route("Ханчжоу", "Гонконг", "Самолёт", new List<string>()),
+
+            new Route("Гонконг", "Пекин", "Самолёт", new List<string> { "Шанхай" }),
+            new Route("Гонконг", "Шанхай", "Самолёт", new List<string>()),
+            new Route("Гонконг", "Гуанчжоу", "Самолёт", new List<string>()),
+            new Route("Гонконг", "Чэнду", "Самолёт", new List<string> { "Шанхай" }),
+            new Route("Гонконг", "Сиань", "Самолёт", new List<string> { "Шанхай" }),
+            new Route("Гонконг", "Ханчжоу", "Самолёт", new List<string> { "Шанхай" }),
 
             // Казахстан: маршруты внутри страны
-            new Route("Алматы", "Астана", "Поезд", new List<string>()),
+             new Route("Алматы", "Астана", "Поезд", new List<string>()),
             new Route("Алматы", "Шымкент", "Поезд", new List<string>()),
             new Route("Алматы", "Караганда", "Самолёт", new List<string>()),
             new Route("Алматы", "Тараз", "Поезд", new List<string>()),
             new Route("Алматы", "Уральск", "Самолёт", new List<string>()),
             new Route("Алматы", "Павлодар", "Самолёт", new List<string>()),
+
+            new Route("Астана", "Алматы", "Поезд", new List<string>()),
             new Route("Астана", "Шымкент", "Самолёт", new List<string>()),
+            new Route("Астана", "Караганда", "Поезд", new List<string>()),
+            new Route("Астана", "Тараз", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Астана", "Уральск", "Самолёт", new List<string>()),
+            new Route("Астана", "Павлодар", "Поезд", new List<string>()),
+
+            new Route("Шымкент", "Алматы", "Поезд", new List<string>()),
+            new Route("Шымкент", "Астана", "Самолёт", new List<string>()),
             new Route("Шымкент", "Караганда", "Самолёт", new List<string>()),
+            new Route("Шымкент", "Тараз", "Поезд", new List<string>()),
+            new Route("Шымкент", "Уральск", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Шымкент", "Павлодар", "Самолёт", new List<string> { "Алматы" }),
+
+            new Route("Караганда", "Алматы", "Самолёт", new List<string>()),
+            new Route("Караганда", "Астана", "Поезд", new List<string>()),
+            new Route("Караганда", "Шымкент", "Самолёт", new List<string>()),
+            new Route("Караганда", "Тараз", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Караганда", "Уральск", "Самолёт", new List<string>()),
+            new Route("Караганда", "Павлодар", "Самолёт", new List<string>()),
+
+            new Route("Тараз", "Алматы", "Поезд", new List<string>()),
+            new Route("Тараз", "Астана", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Тараз", "Шымкент", "Поезд", new List<string>()),
+            new Route("Тараз", "Караганда", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Тараз", "Уральск", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Тараз", "Павлодар", "Самолёт", new List<string> { "Алматы" }),
+
+            new Route("Уральск", "Алматы", "Самолёт", new List<string>()),
+            new Route("Уральск", "Астана", "Самолёт", new List<string>()),
+            new Route("Уральск", "Шымкент", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Уральск", "Караганда", "Самолёт", new List<string>()),
+            new Route("Уральск", "Тараз", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Уральск", "Павлодар", "Самолёт", new List<string>()),
+
+            new Route("Павлодар", "Алматы", "Самолёт", new List<string>()),
+            new Route("Павлодар", "Астана", "Поезд", new List<string>()),
+            new Route("Павлодар", "Шымкент", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Павлодар", "Караганда", "Самолёт", new List<string>()),
+            new Route("Павлодар", "Тараз", "Самолёт", new List<string> { "Алматы" }),
+            new Route("Павлодар", "Уральск", "Самолёт", new List<string>()),
 
             // Международные маршруты
+            // Россия <-> Беларусь
             new Route("Москва", "Минск", "Самолёт", new List<string>()),
+            new Route("Минск", "Москва", "Самолёт", new List<string>()),
+
+            // Россия <-> Казахстан
+            new Route("Москва", "Астана", "Самолёт", new List<string>()),
+            new Route("Астана", "Москва", "Самолёт", new List<string>()),
+
+            // Россия <-> Канада
             new Route("Москва", "Торонто", "Самолёт", new List<string>()),
+            new Route("Торонто", "Москва", "Самолёт", new List<string>()),
+
+            // Россия <-> Китай
             new Route("Москва", "Пекин", "Самолёт", new List<string>()),
-            new Route("Москва", "Алматы", "Самолёт", new List<string>()),
-            new Route("Минск", "Пекин", "Самолёт", new List<string> { "Москва" }),
-            new Route("Минск", "Алматы", "Самолёт", new List<string> { "Москва" }),
+            new Route("Пекин", "Москва", "Самолёт", new List<string>()),
+
+            // Беларусь <-> Казахстан
+            new Route("Минск", "Астана", "Самолёт", new List<string> { "Москва" }),
+            new Route("Астана", "Минск", "Самолёт", new List<string> { "Москва" }),
+
+            // Беларусь <-> Канада
             new Route("Минск", "Торонто", "Самолёт", new List<string> { "Москва" }),
-            new Route("Торонто", "Пекин", "Самолёт", new List<string> { "Москва" }),
-            new Route("Торонто", "Алматы", "Самолёт", new List<string> { "Москва" }),
-            new Route("Пекин", "Алматы", "Самолёт", new List<string>()),
+            new Route("Торонто", "Минск", "Самолёт", new List<string> { "Москва" }),
+
+            // Беларусь <-> Китай
+            new Route("Минск", "Пекин", "Самолёт", new List<string> { "Москва" }),
+            new Route("Пекин", "Минск", "Самолёт", new List<string> { "Москва" }),
+
+            // Казахстан <-> Канада
+            new Route("Астана", "Торонто", "Самолёт", new List<string> { "Москва" }),
+            new Route("Торонто", "Астана", "Самолёт", new List<string> { "Москва" }),
+
+            // Казахстан <-> Китай
+            new Route("Астана", "Пекин", "Самолёт", new List<string>()),
+            new Route("Пекин", "Астана", "Самолёт", new List<string>()),
+
+            // Канада <-> Китай
+            new Route("Торонто", "Пекин", "Самолёт", new List<string>()),
+            new Route("Пекин", "Торонто", "Самолёт", new List<string>())
             };
 
             Console.WriteLine("Добро пожаловать в систему поиска маршрутов!");
@@ -127,33 +355,65 @@ namespace TravelTickets
                 return;
             }
 
-            var route = FindRoute(routes, departure, destination);
-            if (route != null)
+            var routeList = FindRouteWithConnections(routes, departure, destination, new HashSet<string>());
+            if (routeList.Any())
             {
+                Console.WriteLine("\nВаш маршрут:");
+                foreach (var r in routeList)
+                {
+                    Console.WriteLine($" - {r.Transport} из {r.From} в {r.To}");
+                }
+
                 var destinationCity = cities.FirstOrDefault(c => c.Name.Equals(destination, StringComparison.OrdinalIgnoreCase));
                 if (destinationCity != null)
                 {
-                    Console.WriteLine($"\nБилет: {route.Transport} из {route.From} в {route.To}.\n" +
-                                      $"Места: {string.Join(", ", destinationCity.Places)}.\n" +
-                                      $"Попробуйте: {string.Join(", ", destinationCity.Food)}.");
-                }
-                else
-                {
-                    Console.WriteLine("\nГород назначения не найден.");
+                    Console.WriteLine($"Места: {string.Join(", ", destinationCity.Places)}.");
+                    Console.WriteLine($"Попробуйте: {string.Join(", ", destinationCity.Food)}.");
                 }
             }
             else
             {
                 Console.WriteLine("\nМаршрут не найден.");
             }
+
         }
 
-        private static Route? FindRoute(List<Route> routes, string from, string to)
+
+
+        private static List<Route> FindRouteWithConnections(List<Route> routes, string from, string to, HashSet<string> visited, int maxConnections = 3)
         {
-            return routes.FirstOrDefault(route =>
-                route.From.Equals(from, StringComparison.OrdinalIgnoreCase) &&
-                route.To.Equals(to, StringComparison.OrdinalIgnoreCase));
+            // Если пункт назначения достигнут, возвращаем пустой список (финальная точка)
+            if (from.Equals(to, StringComparison.OrdinalIgnoreCase))
+                return new List<Route>();
+
+            // Добавляем текущий город в посещенные
+            visited.Add(from);
+
+            // Ищем прямые маршруты и маршруты через пересадки
+            foreach (var route in routes.Where(r => r.From.Equals(from, StringComparison.OrdinalIgnoreCase) && !visited.Contains(r.To)))
+            {
+                if (route.To.Equals(to, StringComparison.OrdinalIgnoreCase))
+                {
+                    // Прямой маршрут найден
+                    return new List<Route> { route };
+                }
+
+                if (maxConnections > 0)
+                {
+                    // Рекурсивный поиск через пересадку
+                    var nextRoutes = FindRouteWithConnections(routes, route.To, to, new HashSet<string>(visited), maxConnections - 1);
+                    if (nextRoutes.Any())
+                    {
+                        // Если маршрут найден, добавляем текущий маршрут в список
+                        return new List<Route> { route }.Concat(nextRoutes).ToList();
+                    }
+                }
+            }
+
+            // Если маршрут не найден, возвращаем пустой список
+            return new List<Route>();
         }
+
     }
 
     public class City
